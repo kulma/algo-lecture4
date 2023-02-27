@@ -7,6 +7,7 @@
 - Refer to the following link. Discuss how open hashing works.
   https://www.cs.usfca.edu/~galles/visualization/OpenHash.html
 > With open hashing, the hash function separates the values into different categories, inside which the values are stored as linked lists.
+
 - Open Hashing Practice. Refer to the following link. Move each record on the left to the appropriate bin on the right.
   https://opendsa-server.cs.vt.edu/OpenDSA/Exercises/Hashing/OpenHashPRO.html
 - Given the following input (`4322, 1334, 1471, 9679, 1989, 6171, 6173, 4199`) and the hash function `x mod 10`, which of the following statements are true?
@@ -34,16 +35,23 @@
 ## Task 3:
 
 - What is the [Birthday Paradox](http://en.wikipedia.org/wiki/Birthday_problem)?
-> The birthday paradox refers to the fact that if one was to collect 23 random people in a room, the probability of at least 2 of them sharing a birthday would be 50+%. It's called a paradox because the number of people needed to surpass the 50% mark is counterintuitively low.
+> (Group 6 answer: The birthday paradox refers to the fact that if one was to collect 23 random people in a room, the probability of at least 2 of them sharing a birthday would be 50+%. It's called a paradox because the number of people needed to surpass the 50% mark is counterintuitively low.)
+
 - Why is it generally discussed with hashing?
-> It helps illustrate the fact that by increasing the size of the hashing table, it doesn't necessarily translate into a lot less collisions.
+> (Group 6 answer: It helps illustrate the fact that by increasing the size of the hashing table, it doesn't necessarily translate into a lot less collisions.)
+
 - In a hash table of 9658 slots, what is the smallest number of records that must be inserted for the probability of a collision to be 61% or more? Use the calculator at this [link](https://opendsa-server.cs.vt.edu/ODSA/AV/Hashing/Birthday.html)
-> The probability surpasses 61% at 136 entries
+> (Group 6 answer: The probability surpasses 61% at 136 entries)
+
 - Discuss in groups how the following program works `./src/birthday.cpp`?
-> The main function calls the find function, which uses the function $\sqrt{2*365*ln(\frac{1}{(1-p)})}$ to determine how many people it takes to reach the given probability of collision.
+> (Group 6 answer: The main function calls the find function, which uses the function $\sqrt{2*365*ln(\frac{1}{(1-p)})}$ to determine how many people it takes to reach the given probability of collision.)
+
 ## Task 4: Individual (at home)
 
 - Difference between `Separate Chaining` and `Open Addressing` collision handling techniques?
+
+> Separate Chaining uses linked list data structure. It's always possible to add more elements to the chain. 
+> In Open Addressing all elements are stored in the hash table that might become full.
 
   https://www.geeksforgeeks.org/open-addressing-collision-handling-technique-in-hashing/
 
